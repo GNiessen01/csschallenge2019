@@ -1,0 +1,54 @@
+
+*{
+    box-sizing: border-box;
+}
+
+.item1 { grid-area: challenge; }
+.item2 { grid-area: tekst; }
+.item3 { grid-area: lente; }
+.item4 { grid-area: kijken; }
+.item5 { grid-area: backpacking; }
+.item6 { grid-area: wildcamperen; }
+.item7 { grid-area: niets; }
+
+
+@media (min-width: 578px) {
+    div#wrapper {
+        width: 100%;
+        margin: auto;
+    }
+
+    grid-container {
+        width: 500px;
+        display: grid;
+        grid-template-areas: "challenge" "tekst" "lente" "kijken" "lente" "backpacking" "wildcamperen";
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    div .item3, .item4, .item5, .item6 {
+        background-color: white;
+        width: 100%;
+        height:200px;
+        display: block;
+    }
+
+    div .item3, .item4, .item5, .item6 {
+        color: grey;
+        display: inline-block;
+    }
+
+    body {
+        background-image: url("img/mountaindark.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h1 {
+        color: white;
+        display: inline-block;
+    }
+    h3 {
+        color: white;
+    }
+}

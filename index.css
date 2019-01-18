@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+}
+div #wrapper {
+    width: 100%;
+}
+body {
+    background-image: url("img/mountaindark.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+    li {
+        background-color: black;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: inline-block;
+    }
+    li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+    }
+h1 {
+    color: white;
+    display: inline-block;
+}
+h3 {
+    color: white;
+}
+
+
+.item1 { grid-area: challenge; }
+.item2 { grid-area: tekst; }
+.item3 { grid-area: lente; }
+.item4 { grid-area: kijken; }
+.item5 { grid-area: backpacking; }
+.item6 { grid-area: wildcamperen; }
+.item7 { grid-area: niets; }
+
+.grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+            "challenge challenge challenge"
+            "tekst tekst tekst"
+            "lente kijken backpacking"
+            "wildcamperen niets niets ";
+    grid-gap: 15px;
+    padding: 10px;
+  }
+
+    div#flexcontainer {
+        display: flex;
+        justify-content: center;
+    }
+div .item3,.item4,.item5,.item6 {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    display: block;
+    font-size: 20px;
+}
+    div .item3 ,.item4 ,.item5 ,.item6 {
+        color: grey;
+        display: inline-block;
+    }
+.grid-container > div {
+    text-align: center;
+    padding: 10px;
+}
+
+div.item3 {
+    padding: 10px;
+}
+@media all and (min-width: 780px) {
+    .grid-container {
+        width: 780px;
+        display: grid;
+        grid-template-areas:
+                "challenge challenge"
+                "tekst tekst"
+                "lente kijken"
+                "backpacking wildcamperen";
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+}
+
+    @media all and (max-width: 970px) {
+        div#wrapper {
+            width: 50%;
+            margin: auto;
+        }
+    }
